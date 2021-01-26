@@ -1,6 +1,6 @@
-# Visual Sorting
+# Binary Tree
 
-Different sorting algorithms on an array of integers displayed visually on the console
+Create, fill, print and destroy a binary tree
 
 ## Build
 
@@ -14,6 +14,6 @@ Different sorting algorithms on an array of integers displayed visually on the c
 
 ### visual sorting
 
-Run the executable enter the size of the array and choose an algorithm
+Run the executable and pass prime numbers input
 
-`build/visualsort`
+`build/binarytree < input/prime_numbers.txt`

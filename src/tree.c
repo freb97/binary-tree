@@ -27,12 +27,21 @@ void node_insert(int data, Node** node) {
     }
 }
 
-void node_print_in_order(Node* node) {
+void tree_print_in_order(Node* node) {
     if (node == NULL) return;
 
-    node_print_in_order(node->left);
+    tree_print_in_order(node->left);
 
     printf("%d ", node->data);
 
-    node_print_in_order(node->right);
+    tree_print_in_order(node->right);
+}
+
+void tree_destroy(Node* node) {
+    if (node == NULL) return;
+
+    tree_destroy(node->left);
+    tree_destroy(node->right);
+
+    free(node);
 }

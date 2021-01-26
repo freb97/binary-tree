@@ -2,24 +2,29 @@
 #include <stdlib.h>
 
 #include "src/tree.h"
-#include "src/sort.h"
 
 int main() {
-    Node* node = NULL;
+    // Root node of our tree
+    Node* tree = NULL;
 
     while (1) {
         int data;
         int scan = scanf("%d", &data);
 
         if (scan == 1) {
-            node_insert(data, &node);
+            // Call insert on root node
+            node_insert(data, &tree);
         }
         else {
             break;
         }
     }
 
-    node_print_in_order(node);
+    // Print tree and pass root node
+    tree_print_in_order(tree);
+
+    // Destroy tree and pass root node
+    tree_destroy(tree);
 
     return 1;
 }

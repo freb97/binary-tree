@@ -15,7 +15,7 @@ Node* node_create(int data) {
 }
 
 void node_insert(int data, Node** node) {
-    if (*node == NULL) {
+    if (!(*node)) {
         *node = node_create(data);
         return;
     }
